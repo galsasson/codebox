@@ -6,6 +6,6 @@
   </head>
   <body>
     <h1>{{ title }}</h1>
-    <p>Welcome to {{ age }}</p>
+    <p>Lets learn how to write code</p>
   </body>
 </html>

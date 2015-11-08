@@ -22,13 +22,22 @@ var router = express.Router();
 //  res.send(req.params.id,200);
 // })
 
+router.get("/", function(req, res) {
+	console.log(req.query);
+
+	res.render('index', {
+		title: 'My App!',
+		age: 33
+	});
+});
+
+
 /* changing path like /id/12321 */
 router.get("/code", function(req, res) {
 	console.log(req.query);
 
 	res.render('code', {
-		title: 'My App!',
-		age: 33
+		title: 'Code!'
 	});
 });
 
@@ -36,8 +45,7 @@ router.get("/play", function(req, res) {
 	console.log(req.query);
 
 	res.render('play', {
-		title: 'My App!',
-		age: 33
+		title: 'Play!'
 	});
 });
 
