@@ -59,3 +59,12 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+
+
+var shm = require("node-shm-buffer");
+console.log("creating buffer");
+var buffer = shm.open(33, "c", 0644, 33);
+
+
+

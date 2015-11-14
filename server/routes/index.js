@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var shm = require("node-shm-buffer");
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
@@ -43,6 +44,18 @@ router.get("/code", function(req, res) {
 
 router.get("/play", function(req, res) {
 	console.log(req.query);
+
+	res.render('play', {
+		title: 'Play!'
+	});
+});
+
+router.get("/paint", function(req, res) {
+	console.log("in paint");
+
+
+	var buffer = shm.open(0, "c", 0644, 33);
+
 
 	res.render('play', {
 		title: 'Play!'
